@@ -2,6 +2,29 @@
 
 ## calf compressor
 
+### applyseplugin
+
+```
+analyseplugin calf.so|grep -i compress -A20
+```
+
+output
+
+```
+Ports:	"In L" input, audio
+	"In R" input, audio
+	"Out L" output, audio
+	"Out R" output, audio
+	"Bypass" input, control, toggled, default 0
+	"Input" input, control, 0 to 64, default 1
+	"Output" input, control, 0 to 64, default 1
+	"Input L" output, control, 0 to 1, default 0
+	"Input R" output, control, 0 to 1, default 0
+	"Output L" output, control, 0 to 1, default 0
+	"Output R" output, control, 0 to 1, default 0
+	"0dB-InL" output, control, 0 to 1, default 0
+```
+
 ### applyplugin without param
 ```
 applyplugin \
