@@ -99,6 +99,7 @@ Ports:	"Peak limit (dB)" input, control, -30 to 0, default 0
 ```
 
 ### applyplugin without param
+
 ```
 if [ -z $1 ];then
 echo "usage arg1=wav"
@@ -154,6 +155,38 @@ Compress \
 ```
 
 ## # vlevel comp
+
+### analyseplugin
+
+```
+analyseplugin vlevel-ladspa.so|grep -i stereo -A20
+```
+
+output
+```
+Ports:	"Look-ahead (seconds)" input, control, 0 to 5, default 2.5
+	"Strength" input, control, 0 to 1, default 0.75
+	"Use Maximum Multiplier" input, control, toggled, default 1
+	"Maximum Multiplier" input, control, 0 to 20, default 10
+	"Undo" input, control, toggled, default 0
+	"Current Multiplier" output, control, 0 to 20
+	"Input 1" input, audio
+	"Output 1" output, audio
+	"Input 2" input, audio
+	"Output 2" output, audio
+```
+### applyplugin without param
+
+```
+applyplugin \
+$1 \
+$1 \
+vlevel-ladspa.so \
+vlevel_stereo
+```
+
+### applyplugin
+
 
 ```
 applyplugin \
