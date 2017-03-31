@@ -123,7 +123,7 @@ Plugin "Dyson compressor" has the following control inputs:
 	Compression ratio (0 to 1)
 ```
 
-### using applyplugin
+### applyplugin
 
 ```
 if [ -z $1 ];then
