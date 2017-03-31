@@ -1,6 +1,6 @@
 # ladspa applyplugin scripts
 
-## #calf compressor
+## =calf compressor=
 
 ### applyseplugin
 
