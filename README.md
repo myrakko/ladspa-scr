@@ -49,8 +49,8 @@ Plugin "Calf Compressor LADSPA" has the following control inputs:
 	Stereo Link (0 to 1)
 ```
 
-## using applyplugin 
-### 
+### using applyplugin 
+
 ```
 if [ -z $1 ];then
 echo "usage arg1=src/my.wav"
@@ -79,4 +79,58 @@ Compressor \
 
 fi
 
+```
+## dyson comp
+### analyseplugin
+```
+analyseplugin dyson_compress_1403.so|grep -i compress -A20
+```
+output
+
+```
+Ports:	"Peak limit (dB)" input, control, -30 to 0, default 0
+	"Release time (s)" input, control, 0 to 1, default 0.25
+	"Fast compression ratio" input, control, 0 to 1, default 0.5
+	"Compression ratio" input, control, 0 to 1, default 0.5
+	"Input" input, audio
+	"Output" output, audio
+```
+
+### applyplugin without param
+```
+if [ -z $1 ];then
+echo "usage arg1=wav"
+else
+
+applyplugin \
+$1 \
+$1 \
+dyson_compress_1403.so \
+dysonCompress
+
+fi
+```
+### using applyplugin 
+
+```
+if [ -z $1 ];then
+echo "usage arg1=src/my.wav"
+else
+
+se1=$(echo $1|sed s/src\\///g)
+
+# comp
+
+applyplugin \
+rat/$se1 \
+dys/$se1 \
+dyson_compress_1403.so \
+dysonCompress \
+0 \
+0.25 \
+.5 \
+.5
+
+
+fi
 ```
