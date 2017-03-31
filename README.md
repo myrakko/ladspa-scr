@@ -152,3 +152,18 @@ Compress \
 100 \
 1
 ```
+
+## # vlevel comp
+
+```
+applyplugin \
+str/$se1 \
+vle/$se1 \
+vlevel-ladspa.so \
+vlevel_stereo \
+2.5 \
+0.75 \
+1 \
+10 \
+1
+```
