@@ -113,6 +113,16 @@ dysonCompress
 
 fi
 ```
+output
+
+```
+Plugin "Dyson compressor" has the following control inputs:
+	Peak limit (dB) (-30 to 0)
+	Release time (s) (0 to 1)
+	Fast compression ratio (0 to 1)
+	Compression ratio (0 to 1)
+```
+
 ### using applyplugin
 
 ```
