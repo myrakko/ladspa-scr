@@ -49,7 +49,7 @@ Plugin "Calf Compressor LADSPA" has the following control inputs:
 	Stereo Link (0 to 1)
 ```
 
-### using applyplugin 
+### using applyplugin
 
 ```
 if [ -z $1 ];then
@@ -80,8 +80,10 @@ Compressor \
 fi
 
 ```
-## dyson comp
+
+## # dyson comp
 ### analyseplugin
+
 ```
 analyseplugin dyson_compress_1403.so|grep -i compress -A20
 ```
@@ -110,7 +112,7 @@ dysonCompress
 
 fi
 ```
-### using applyplugin 
+### using applyplugin
 
 ```
 if [ -z $1 ];then
