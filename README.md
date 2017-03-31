@@ -136,3 +136,19 @@ dysonCompress \
 
 fi
 ```
+
+## # caps comp
+
+```
+applyplugin \
+$se1 \
+$se1 \
+caps.so \
+Compress \
+5 \
+5 \
+.5 \
+.5 \
+100 \
+1
+```
